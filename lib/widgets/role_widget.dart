@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../core/app_raduis.dart';
 import '../core/color_manager.dart';
 
 class RoleWidgwt extends StatelessWidget {
@@ -6,12 +7,12 @@ class RoleWidgwt extends StatelessWidget {
     super.key,
     required this.title,
     required this.icon,
-    this.isSelected = false,
+    this.color = Colors.transparent,
     required this.onPressed,
   });
   final String title;
   final String icon;
-  final bool isSelected;
+  final Color color;
   final Function onPressed;
 
   @override
@@ -19,15 +20,15 @@ class RoleWidgwt extends StatelessWidget {
     return Column(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            onPressed();
+          },
           child: Container(
             width: 90,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              color: isSelected
-                  ? ColorsManager.backGroundColor
-                  : Colors.transparent,
+              borderRadius: AppRaduis.borderAll12,
+              color: color,
               border: Border.all(
                 color: ColorsManager.mainColor,
               ),

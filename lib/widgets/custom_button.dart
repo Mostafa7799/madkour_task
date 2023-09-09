@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:madkour_task/core/app_raduis.dart';
 
 import '../core/color_manager.dart';
 
@@ -21,7 +22,7 @@ class CustomButton extends StatelessWidget {
         margin: const EdgeInsets.all(12),
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: AppRaduis.borderAll12,
           color: ColorsManager.mainColor,
         ),
         child: Center(
