@@ -69,7 +69,7 @@ class _AdminScreenState extends State<AdminScreen> {
                       ),
                       CustomTextFromField(
                         controller: nameController,
-                        lablel: 'Name',
+                        label: 'Name',
                         suffix: const Icon(
                           Icons.person,
                           size: 30,
@@ -80,7 +80,7 @@ class _AdminScreenState extends State<AdminScreen> {
                       ),
                       CustomTextFromField(
                         controller: addressController,
-                        lablel: 'Email',
+                        label: 'Email',
                         suffix: const Icon(
                           Icons.email,
                           size: 30,
@@ -105,7 +105,7 @@ class _AdminScreenState extends State<AdminScreen> {
                             birthdateController.text = formattedDate;
                           }
                         },
-                        lablel: 'Birthdate',
+                        label: 'Birthdate',
                         suffix: const Icon(
                           Icons.date_range_outlined,
                           size: 30,

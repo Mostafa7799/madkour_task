@@ -5,12 +5,12 @@ class CustomTextFromField extends StatelessWidget {
   const CustomTextFromField({
     super.key,
     required this.controller,
-    required this.lablel,
+    required this.label,
     this.suffix,
     this.onTap,
   });
   final TextEditingController controller;
-  final String lablel;
+  final String label;
   final Function? onTap;
   final Widget? suffix;
 
@@ -33,7 +33,7 @@ class CustomTextFromField extends StatelessWidget {
         // Needed for adding a fill color
         fillColor: Colors.white,
         isDense: true,
-        label: Text(lablel),
+        label: Text(label),
         // Reduces height a bit
         suffixIcon: suffix,
         enabledBorder: OutlineInputBorder(

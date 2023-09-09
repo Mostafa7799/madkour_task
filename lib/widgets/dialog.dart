@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+
+class AnimatedDialog {
+  static Future showAnimatedDialog(BuildContext context, Widget dialog,
+      {bool isFlip = false, bool dismissible = true}) async{
+    showGeneralDialog(
+      context: context,
+      barrierDismissible: false,
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+      barrierColor: Colors.black.withOpacity(0.5),
+      pageBuilder: (context, animation1, animation2) => dialog,
+      transitionDuration: const Duration(milliseconds: 500),
+      transitionBuilder: (context, a1, a2, widget) {
+        return Transform.scale(
+          scale: a1.value,
+          child: Opacity(
+            opacity: a1.value,
+            child: widget,
+          ),
+        );
+      },
+    );
+  }
+}

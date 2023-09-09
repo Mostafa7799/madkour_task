@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:madkour_task/screens/input/input_screen.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -44,6 +46,19 @@ class Header extends StatelessWidget {
             ),
           ],
         ),
+        const Spacer(),
+        IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              PageTransition(
+                type: PageTransitionType.leftToRight,
+                child: const InputScreen(),
+              ),
+            );
+          },
+          icon: const Icon(Icons.logout),
+        )
       ],
     );
   }

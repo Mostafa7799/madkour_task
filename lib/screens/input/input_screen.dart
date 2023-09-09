@@ -105,14 +105,14 @@ class _InputScreenState extends State<InputScreen> {
                       ),
                       CustomTextFromField(
                         controller: emailController,
-                        lablel: AppString.email,
+                        label: AppString.email,
                       ),
                       const SizedBox(
                         height: 12,
                       ),
                       CustomTextFromField(
                         controller: passwordController,
-                        lablel: AppString.password,
+                        label: AppString.password,
                       ),
                       CustomButton(
                         text: AppString.login,
