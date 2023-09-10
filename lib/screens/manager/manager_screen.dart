@@ -6,6 +6,7 @@ import '../../widgets/custom_button.dart';
 import '../../widgets/dialog.dart';
 import '../../widgets/header.dart';
 import '../../widgets/list_card.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ManagerScreen extends StatefulWidget {
   const ManagerScreen({super.key});
@@ -138,7 +139,7 @@ class _ManagerScreenState extends State<ManagerScreen> {
                 const Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: 80,
-                    horizontal: 20,
+                    horizontal: kIsWeb ? 120 : 20,
                   ),
                   child: CreateCustomerWidget(
                     isManager: true,

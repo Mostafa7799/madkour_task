@@ -5,6 +5,7 @@ import 'package:madkour_task/widgets/custom_button.dart';
 import 'package:madkour_task/widgets/header.dart';
 import 'package:madkour_task/widgets/text_form_field.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class AdminScreen extends StatefulWidget {
   const AdminScreen({super.key});
@@ -37,7 +38,7 @@ class _AdminScreenState extends State<AdminScreen> {
                   image: "assets/businessman.png",
                 ),
                 Container(
-                  width: double.infinity,
+                  width: kIsWeb ? 400 : double.infinity,
                   padding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
                   margin: const EdgeInsets.symmetric(vertical: 10),

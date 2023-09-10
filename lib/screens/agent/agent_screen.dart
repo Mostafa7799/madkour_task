@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:madkour_task/widgets/custom_button.dart';
 import 'package:madkour_task/widgets/header.dart';
-
+import 'package:flutter/foundation.dart' show kIsWeb;
 import '../../data/customer_data.dart';
 import '../../widgets/create_customer.dart';
 import '../../widgets/dialog.dart';
@@ -72,7 +72,7 @@ class _AgentScreenState extends State<AgentScreen> {
                 const Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: 80,
-                    horizontal: 20,
+                    horizontal: kIsWeb ? 100 : 20,
                   ),
                   child: CreateCustomerWidget(),
                 ),

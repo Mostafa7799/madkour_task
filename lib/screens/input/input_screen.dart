@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/material.dart';
 import 'package:madkour_task/core/color_manager.dart';
 import 'package:madkour_task/core/strings_manager.dart';
 import 'package:madkour_task/screens/admin/admin_screen.dart';
@@ -36,13 +36,13 @@ class _InputScreenState extends State<InputScreen> {
               child: Center(
                 child: Image.asset(
                   'assets/madkour-utilities2.png',
-                  width: kIsWeb ? 400 : 160,
+                  width: kIsWeb ? 120 : 160,
                 ),
               ),
             ),
             Expanded(
               child: Container(
-                width: double.infinity,
+                width: kIsWeb ? 400 : double.infinity,
                 margin: const EdgeInsets.all(12),
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
